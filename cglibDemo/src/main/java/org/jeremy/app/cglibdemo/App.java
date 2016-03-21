@@ -8,7 +8,11 @@ public class App {
 	
 	public static void main(String[] args) {
 	
-		System.out.println("Hello World!");
+		PersonCglibProxy proxy = new PersonCglibProxy();
+		
+		Person p = (Person) proxy.getProxy(Person.class);
+		
+		p.say();
 	}
 	
 }
